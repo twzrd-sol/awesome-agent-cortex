@@ -27,3 +27,7 @@ Which section does this belong to?
 ### Why?
 
 Brief justification for why this entry belongs on the list.
+
+### Intentional cross-listings (if any)
+
+If this PR adds a resource that already appears in another section, explain why the overlap is intentional and useful.

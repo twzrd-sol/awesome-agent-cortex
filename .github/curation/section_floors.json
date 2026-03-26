@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "note": "Minimum section sizes; update intentionally when taxonomy is revised.",
+  "floors": {
+    "Agent Frameworks": 24,
+    "Coding Agents": 20,
+    "MCP Ecosystem": 16,
+    "Agent Harnessing and Evaluation": 24,
+    "Agent Security and Robustness": 10,
+    "Agent Configs and Dotfiles": 8,
+    "Skill Engineering and Playbooks": 10,
+    "Knowledge Graphs and Memory": 18,
+    "Agent Observability and Testing": 16,
+    "Hermes Stack": 8
+  }
+}

@@ -79,6 +79,19 @@ Rules for cross-listing:
 4. Avoid excessive repetition. If a project appears in more than two sections,
    justify why.
 
+## Catalog-Driven README Workflow
+
+The curated resources block in `README.md` is generated from `data/resources.json`.
+
+When changing entries:
+
+1. Edit `data/resources.json`.
+2. Regenerate README:
+   - `python .github/scripts/generate_readme_from_catalog.py`
+3. Commit both `data/resources.json` and `README.md`.
+
+CI enforces that the generated README matches the catalog.
+
 ## Suggesting a New Section
 
 Open an issue first to discuss whether a new section is warranted. New sections

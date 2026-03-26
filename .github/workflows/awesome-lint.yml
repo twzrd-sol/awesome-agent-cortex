@@ -4,14 +4,23 @@ on:
   pull_request:
     paths:
       - 'README.md'
+      - 'data/resources.json'
+      - '.github/curation/section_floors.json'
       - '.github/workflows/awesome-lint.yml'
       - '.github/scripts/check_alpha_sections.py'
+      - '.github/scripts/check_section_floors.py'
+      - '.github/scripts/check_cross_listing_rationale.py'
+      - '.github/scripts/generate_readme_from_catalog.py'
   push:
     branches: [main]
     paths:
       - 'README.md'
+      - 'data/resources.json'
+      - '.github/curation/section_floors.json'
       - '.github/workflows/awesome-lint.yml'
       - '.github/scripts/check_alpha_sections.py'
+      - '.github/scripts/check_section_floors.py'
+      - '.github/scripts/generate_readme_from_catalog.py'
 
 jobs:
   awesome-lint:
@@ -19,6 +28,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -29,5 +45,22 @@ jobs:
         continue-on-error: true
         run: npx --yes awesome-lint README.md
 
+      - name: Regenerate README from catalog
+        run: python3 .github/scripts/generate_readme_from_catalog.py
+
+      - name: Ensure README is in sync with catalog
+        run: git diff --exit-code README.md
+
       - name: Check alphabetical order in curated sections
         run: python3 .github/scripts/check_alpha_sections.py README.md
+
+      - name: Enforce section floors
+        run: python3 .github/scripts/check_section_floors.py
+
+      - name: Require rationale for new cross-listings
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_REF: ${{ github.base_ref }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+        run: python3 .github/scripts/check_cross_listing_rationale.py

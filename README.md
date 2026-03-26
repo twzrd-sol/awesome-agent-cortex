@@ -41,6 +41,7 @@ CLI usage).
 - [Research Papers](#research-papers)
 - [Communities](#communities)
 
+<!-- RESOURCES:START -->
 ## Agent Frameworks
 
 Multi-agent orchestration, single-agent SDKs, and runtime frameworks.
@@ -315,21 +316,24 @@ Obsidian-specific architecture patterns and APIs for using vaults as agent memor
 
 Safety, red-teaming, and robustness tools for hardening agent behavior.
 
+- [DeepTeam](https://github.com/confident-ai/deepteam) - Framework for red-teaming LLMs and agent systems with automated attack generation and scoring.
 - [garak](https://github.com/NVIDIA/garak) - LLM vulnerability scanning and red-teaming toolkit for security testing.
 - [Guardrails AI](https://github.com/guardrails-ai/guardrails) - Validation and safety guardrails framework for LLM outputs.
 - [Invariant](https://github.com/invariantlabs-ai/invariant) - Guardrails framework for secure and robust agent development.
 - [JailbreakBench](https://github.com/JailbreakBench/jailbreakbench) - Open robustness benchmark for measuring jailbreak resistance in language models and agents.
 - [llm-attacks](https://github.com/llm-attacks/llm-attacks) - Reference implementation and resources for adversarial jailbreak attack evaluation.
 - [MCP Security Best Practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices) - Official security guidance for MCP authorization flows, threats, and mitigations.
+- [Microsoft Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) - Policy enforcement and zero-trust governance toolkit for autonomous AI agent deployments.
 - [NeMo Guardrails](https://github.com/NVIDIA-NeMo/Guardrails) - Toolkit for adding programmable safety and policy guardrails to LLM systems.
 - [Promptfoo](https://github.com/promptfoo/promptfoo) - Red-teaming and robustness testing toolkit for LLM systems.
+
 - [PyRIT](https://github.com/Azure/PyRIT) - Python Risk Identification Tool for proactively testing generative AI security risks.
 - [Qualys TotalAI MCP Security](https://blog.qualys.com/product-tech/2026/03/19/mcp-servers-shadow-it-ai-qualys-totalai-2026) - MCP server security assessment and shadow IT detection for enterprise environments.
-
 ## Agent Configs and Dotfiles
 
 Configuration files and workflow examples for AI coding tools.
 
+- [AGENTS.md](https://github.com/agentsmd/agents.md) - Open format for repository-scoped instructions that guide coding agents across tools.
 - [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules) - Curated list of Cursor rule files.
 - [Claude Code Memory Files](https://docs.anthropic.com/en/docs/claude-code/memory) - Guide to CLAUDE.md and project memory.
 - [Claude Code Starter Configs](claude/) - Ready-to-use CLAUDE.md, rules, hooks, and skills for Claude Code projects.
@@ -337,23 +341,27 @@ Configuration files and workflow examples for AI coding tools.
 - [Cursor Starter Configs](cursorrules/) - Ready-to-use .cursorrules and rule files for Cursor projects.
 - [CursorDirectory](https://cursor.directory) - Community-shared Cursor rules and configurations.
 - [dotfiles](https://dotfiles.github.io) - Guide to managing dotfiles including agent configurations.
+- [Ruler](https://github.com/intellectronica/ruler) - Policy layer for applying consistent coding rules across different AI coding agents.
+
 - [Superpowers](https://github.com/obra/superpowers) - Shell-based agentic skills methodology with composable capability configs.
 - [Trail of Bits Claude Code Config](https://github.com/trailofbits/claude-code-config) - Opinionated Claude Code defaults and workflows from a security-focused engineering team.
-
 ## Skill Engineering and Playbooks
 
 Hands-on resources for designing, testing, and shipping high-quality agent skills.
 
 - [Agent Skills for Context Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering) - Collection of agent skills for context engineering, multi-agent architectures, and production systems.
 - [Agent Skills for LLMs (paper)](https://arxiv.org/abs/2602.12430) - Research on skill augmentation design principles and effectiveness for LLM-based agents.
+- [AgentSkills Specification](https://github.com/agentskills/agentskills) - Open specification and documentation for portable agent skill packaging and execution semantics.
 - [Anthropic: The Complete Guide to Building Skills for Claude (PDF)](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf) - Canonical end-to-end guide covering structure, triggering, testing, and distribution.
 - [anthropics/skills](https://github.com/anthropics/skills) - Official production-ready skill examples and reference implementations.
 - [Claude Skill Engineering Playbook (this repo)](guides/claude-skill-engineering-playbook.md) - Distilled patterns, anti-patterns, templates, and troubleshooting from the Anthropic guide.
 - [Claude Skills Quickstart Checklist (this repo)](guides/claude-skills-quickstart-checklist.md) - Build-test-ship checklist for repeatable skill quality.
+- [OpenAI Skills](https://github.com/openai/skills) - Official Codex skills catalog with reusable workflows and integrations.
 - [SkillsBench](https://arxiv.org/html/2602.12670v1) - Benchmark for evaluating how well agent skills work across diverse tasks and harness configurations.
+
 - [Spring AI Agent Skills](https://spring.io/blog/2026/01/13/spring-ai-generic-agent-skills/) - Modular, reusable skill capabilities for the Spring AI Java ecosystem.
 - [Superpowers](https://github.com/obra/superpowers) - Agentic skills framework and software development methodology with composable skill architecture.
-
+- [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) - Official production skill collection for building and sharing reusable agent capabilities.
 ## Knowledge Graphs and Memory
 
 Agent memory architectures, knowledge graphs, and second-brain integrations.
@@ -484,6 +492,7 @@ Debugging, tracing, evaluation, and testing tools for AI agents.
 - [Helicone](https://github.com/Helicone/helicone) - Open-source LLM observability and monitoring platform.
 - [LangFuse](https://github.com/langfuse/langfuse) - Open-source LLM engineering platform for tracing and evaluation.
 - [LangSmith](https://smith.langchain.com) - Platform for debugging, testing, and monitoring LLM applications.
+- [LangWatch](https://github.com/langwatch/langwatch) - Open platform for LLM evaluations and agent testing with trace-centric diagnostics.
 - [LiteLLM](https://github.com/BerriAI/litellm) - LLM gateway and proxy with logging, cost tracking, and routing controls.
 - [OpenAI Evals](https://github.com/openai/evals) - Framework and benchmark registry for evaluating LLM systems.
 - [OpenLLMetry](https://github.com/traceloop/openllmetry) - OpenTelemetry-based observability for LLM applications.
@@ -492,11 +501,12 @@ Debugging, tracing, evaluation, and testing tools for AI agents.
 - [Portkey](https://github.com/Portkey-AI/gateway) - AI gateway with observability, caching, and fallback routing.
 - [SigNoz](https://github.com/SigNoz/signoz) - OpenTelemetry-native observability platform for traces, logs, and metrics.
 - [TruLens](https://github.com/truera/trulens) - Open-source framework for evaluating and tracking LLM and agent experiments.
-- [Weave](https://github.com/wandb/weave) - Toolkit for tracking and evaluating LLM applications from W&B.
 
+- [Weave](https://github.com/wandb/weave) - Toolkit for tracking and evaluating LLM applications from W&B.
 ## Research Papers
 
 Curated papers on AI agents, multi-agent systems, and agent infrastructure.
+
 
 - [A Survey on Large Language Model based Autonomous Agents](https://arxiv.org/abs/2308.11432) - Comprehensive survey of LLM-based agent architectures.
 - [ArXiv Deep Research Map (this repo)](guides/arxiv-deep-research-map.md) - Category-by-category reading map spanning frameworks, coding, MCP/tool use, memory, security, multimodal, and quant/on-chain adjacent domains.
@@ -524,6 +534,7 @@ Forums, Discord servers, newsletters, and social accounts.
 - [r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/) - Community for local LLM deployment and agent experimentation.
 - [Solana AI Discord](https://discord.gg/solana) - Solana developer community with AI channels.
 
+<!-- RESOURCES:END -->
 ---
 
 ## Contributing
